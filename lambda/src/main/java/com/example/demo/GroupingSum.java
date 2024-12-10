@@ -1,4 +1,4 @@
-package main.com.example.demo;
+package main.java.com.example.demo;
 
 import java.util.*;
 import java.util.stream.Collectors;
