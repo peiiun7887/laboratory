@@ -1,0 +1,17 @@
+<configuration>
+    <appender name="MASK" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="com.example.MaskingPatternLayout">
+                <maskPattern>cvv=([0-9]{3})</maskPattern>
+                <maskPattern>cardNo=([0-9]{11,16})</maskPattern>
+                <maskPattern>phonNo=\(([0-9]{2})\)([0-9]{8,10})</maskPattern>
+                <maskPattern>.*phonNo=([0-9]{10})</maskPattern>
+                <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+            </layout>
+        </encoder>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="MASK" />
+    </root>
+</configuration>
