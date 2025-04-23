@@ -1,12 +1,18 @@
 package com.example;
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
-public class PaymentDTOTester {
+@Component
+public class MyRunner implements CommandLineRunner {
 
-    private static  final Logger logger = LoggerFactory.getLogger(PaymentDTOTester.class);
-    public static void main(String[] args) {
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    @Override
+    public void run(String... args) throws Exception {
 
         PaymentDTO dto = new PaymentDTO();
         PaymentDTO.PayData payData = new PaymentDTO.PayData();
@@ -16,7 +22,7 @@ public class PaymentDTOTester {
         payData.setExpireDate("1230");
         payData.setTxNo("001");
         dto.setData(payData);
-        logger.debug("PaymentDTO: {}", dto);
+        logger.info("PaymentDTO: {}", dto);
 
         PaymentDTO dto2 = new PaymentDTO();
         PaymentDTO.PayData payData2 = new PaymentDTO.PayData();
@@ -26,7 +32,7 @@ public class PaymentDTOTester {
         payData2.setExpireDate("1230");
         payData2.setTxNo("002");
         dto2.setData(payData2);
-        logger.debug("PaymentDTO: {}", dto2);
+        logger.info("PaymentDTO: {}", dto2);
 
         PaymentDTO dto3 = new PaymentDTO();
         PaymentDTO.PayData payData3 = new PaymentDTO.PayData();
@@ -36,7 +42,7 @@ public class PaymentDTOTester {
         payData3.setExpireDate("1230");
         payData3.setTxNo("003");
         dto3.setData(payData3);
-        logger.debug("PaymentDTO: {}", dto3);
+        logger.info("PaymentDTO: {}", dto3);
 
         PaymentDTO dto4= new PaymentDTO();
         PaymentDTO.PayData payData4 = new PaymentDTO.PayData();
@@ -46,7 +52,7 @@ public class PaymentDTOTester {
         payData4.setExpireDate("1230");
         payData4.setTxNo("004");
         dto4.setData(payData4);
-        logger.debug("PaymentDTO: {}", dto4);
+        logger.info("PaymentDTO: {}", dto4);
 
         PaymentDTO dto5 = new PaymentDTO();
         PaymentDTO.PayData payData5 = new PaymentDTO.PayData();
@@ -56,7 +62,7 @@ public class PaymentDTOTester {
         payData5.setExpireDate("1230");
         payData5.setTxNo("005");
         dto5.setData(payData5);
-        logger.debug("PaymentDTO: {}", dto5);
+        logger.info("PaymentDTO: {}", dto5);
 
         PaymentDTO dto6 = new PaymentDTO();
         PaymentDTO.PayData payData6 = new PaymentDTO.PayData();
@@ -66,6 +72,16 @@ public class PaymentDTOTester {
         payData6.setExpireDate("1230");
         payData6.setTxNo("006");
         dto6.setData(payData6);
-        logger.debug("PaymentDTO: {}", dto6);
+        logger.info("PaymentDTO: {}", dto6);
+
+        UserDTO userDTO = new UserDTO();
+        userDTO.setPhoneNo("(06)99116000");
+        userDTO.setCellPhoneNo("0912345678");
+        logger.info("UserDTO: {}", userDTO);
+
+        UserDTO userDTO2 = new UserDTO();
+        userDTO2.setPhoneNo("(06)9911600011");
+        userDTO2.setCellPhoneNo("0912345678");
+        logger.info("UserDTO: {}", userDTO2);
     }
 }
