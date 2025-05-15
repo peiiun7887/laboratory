@@ -13,6 +13,7 @@ public class SampleController {
 
     @PostMapping("/payment")
     public ResponseEntity<String> payment(@RequestBody @Valid SampleDTO sampleDTO) {
+        System.out.println("host: " + sampleDTO.getHost());
         return ResponseEntity.ok("successful");
     }
 }

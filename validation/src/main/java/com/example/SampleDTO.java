@@ -88,6 +88,19 @@ public class SampleDTO {
     public void setTxNoxNo(String txNo) {
       this.txNo = txNo;
     }
+
+    @Override
+    public String toString() {
+      return "PayData{" +
+              "orderNo='" + orderNo + '\'' +
+              ", amount='" + amount + '\'' +
+              ", authFlag='" + authFlag + '\'' +
+              ", cardNo='" + cardNo + '\'' +
+              ", expireDate='" + expireDate + '\'' +
+              ", cvv='" + cvv + '\'' +
+              ", txNo='" + txNo + '\'' +
+              '}';
+    }
   }
 
   public String getHost() {
@@ -106,6 +119,11 @@ public class SampleDTO {
     this.data = data;
   }
 
-
-
+  @Override
+  public String toString() {
+    return "SampleDTO{" +
+            "host='" + host + '\'' +
+            ", data=" + data +
+            '}';
+  }
 }
