@@ -16,7 +16,7 @@ import java.util.Random;
 
 import static java.lang.Thread.sleep;
 
-@Component
+//@Component
 public class ScheduleEntry {
 
     /**
